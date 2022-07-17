@@ -1,0 +1,64 @@
+*, *::after, *::before{
+    margin: 0;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+    color: white;
+    font-size: 24px;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    width: 450px;
+    justify-content: space-around;
+    margin: 10px
+}
+
+input{
+    cursor: pointer;
+}
+
+label{
+    position: relative;
+}
+
+label::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2.5px;
+    bottom: 0;
+    left: 0;
+    background: white;
+    transition: all .5s ease 0s;
+}
+
+label:hover::before{
+    width: 100%;
+}
+
+.input-file{
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
